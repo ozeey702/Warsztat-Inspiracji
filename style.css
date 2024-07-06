@@ -109,7 +109,8 @@ main {
 }
 
 .images img {
-    width: 280px; /* Zwiększamy szerokość obrazków */
+    width: 100%; /* Poprawka na szerokość 100% */
+    max-width: 280px; /* Utrzymanie maksymalnej szerokości */
     height: auto;
     margin: 0 10px; /* Zmniejszamy margines między obrazkami */
     border-radius: 10px;
@@ -128,6 +129,7 @@ button.prev, button.next {
     border-radius: 50%;
     font-size: 18px;
     transition: background-color 0.3s;
+    margin: 0 5px; /* Dodanie marginesu do przycisków */
 }
 
 button.prev {
@@ -154,22 +156,6 @@ button.prev:hover, button.next:hover {
     text-align: center;
 }
 
-.contact {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact p {
-    margin: 10px 0;
-}
-
 .contact img {
     margin: 0 10px;
     transition: transform 0.3s;
@@ -177,13 +163,6 @@ button.prev:hover, button.next:hover {
 
 .contact img:hover {
     transform: scale(1.1);
-}
-
-.map-container {
-    border: 5px solid #dda0dd; /* Kolor ramki */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia do ramki */
 }
 
 footer {
@@ -307,4 +286,90 @@ footer p {
 
 .side-menu ul li a:hover {
     color: #dda0dd; /* Kolor podświetlenia */
+}
+
+.description-contact-container {
+    display: flex;
+    float:left;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.description-text h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.description-text p {
+    margin: 0;
+    text-align: left;
+}
+
+.contact {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 5px; /* Margines lewy zmniejszony */
+}
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.contact .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.contact .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.map-container {
+    border: 5px solid #dda0dd; /* Kolor ramki */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia do ramki */
+}
+
+.description-image {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 5px; /* Margines prawy zmniejszony */
+    float:right;
+    display: flex;
+}
+
+.description-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.description-image-container {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.description-image img {
+    width: 100px; /* Ustalona szerokość zdjęcia */
+    height: auto;
 }
