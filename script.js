@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-        moveCarousel(0); // Resetowanie pozycji na wypadek zmiany rozmiaru okna
+        if (window.innerWidth <= 768) {
+            // Przekierowanie na inną stronę dla urządzeń o szerokości <= 768px
+            window.location.href = 'mobilna-wersja-strony.html';
+        } else {
+            moveCarousel(0); // Resetowanie pozycji na wypadek zmiany rozmiaru okna
+        }
     });
 });
